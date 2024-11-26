@@ -158,36 +158,6 @@ var userMedia = navigator.mediaDevices.getUserMedia(constraints)
     })
 
 
-
-    // Send Message
-    var btnSendMsg = document.querySelector('#btn-send-msg');
-    var messageList = document.querySelector("#message-list")
-    var messageInput = document.querySelector("#msg")
-    
-    btnSendMsg.addEventListener('click', sendMsgClick);
-
-    function sendMsgClick(){
-        var message = messageInput.value;
-
-        var li = document.createElement('li');
-        li.appendChild(document.createTextNode('Me: ' + message));
-        messageList.appendChild(li);
-
-        var dataChannels = getDataChannels();
-
-        message = username + ': ' + message
-
-        for(index in dataChannels){
-            dataChannels[index].send(message);
-        }
-
-        messageInput.value = '';
-
-
-    }
-
-
-
     // Send Signal Function
     function sendSignal(action, message){
         var jsonStr = JSON.stringify({
@@ -327,6 +297,7 @@ var userMedia = navigator.mediaDevices.getUserMedia(constraints)
 
 
     // Messages
+    var messageList = document.querySelector("#message-list")
     function dcOnMessage(event){
         var message = event.data;
 
@@ -367,18 +338,4 @@ var userMedia = navigator.mediaDevices.getUserMedia(constraints)
         var videoWrapper = videoContainer;
 
         videoWrapper.parentNode.removeChild(videoWrapper);
-    }
-
-
-
-    // getDataChannels
-    function getDataChannels(){
-        var dataChannels = [];
-
-        for(peerUsername in mapPeers){
-            var dataChannel = mapPeers[peerUsername][1];
-
-            dataChannels.push(dataChannel);
-        }
-        return dataChannels;
     }
