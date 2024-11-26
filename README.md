@@ -2,8 +2,6 @@
 
 A real-time multi-client video chat web application built using **Django**, **WebSocket**, and **WebRTC**. This project demonstrates how to implement real-time video communication between users with server-side signaling using **django-channels**. The frontend is developed using vanilla JavaScript.
 
-![](https://s32.picofile.com/file/8480843334/file_RKjnG3tr6HokCSpURJdu7b.png)
-
 ## Features
 - Multi-client video chat.
 - Real-time signaling via WebSocket.
@@ -32,3 +30,5 @@ Before running the project, ensure you have the following installed:
    ```bash
    git clone https://github.com/MiladJoodi/Real_Time_Video_Chat_Django_and_WebRTC.git
    cd Real_Time_Video_Chat_Django_and_WebRTC
+
+![](https://s32.picofile.com/file/8480843334/file_RKjnG3tr6HokCSpURJdu7b.png)
