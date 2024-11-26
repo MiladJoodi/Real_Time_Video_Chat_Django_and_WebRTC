@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+.env/
+
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Django-specific files
+db.sqlite3  # اگر از دیتابیس SQLite استفاده می‌کنید
+*.log       # فایل‌های لاگ
+
+# Static and media files (optional, اگر تولید مجدد شوند)
+staticfiles/
+media/
+
+# Ignore migrations (optional, اما بهتر است ذخیره شوند)
+*/migrations/*
+
+# VS Code settings (اگر از VS Code استفاده می‌کنید)
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# OS-specific files
+.DS_Store  # در سیستم‌عامل مک
+Thumbs.db  # در ویندوز
